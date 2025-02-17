@@ -24,19 +24,39 @@ Test unitaire
 (création d'un bot discord pour les push, PR, et mise en place de tickets) 
 
 USER: 
-
+Inscription
+Connexion 
+Update de son compte
+Noter les jeux
+Faire des reviews sur un jeu 
+pouvoir commenter les reviews des jeux 
 
 ADMIN:
 CRUD USER 
 CRUD JEUX
 
+JEUX: 
+Recenser les Jeux joués et à faire liés par un user 
 
-## Étape de projet 
-
+## Étapes du projet 
 ##**TODOLIST**
 
-Base de données
-Conteneur Docker
-CI/CD
-Maquette Figma
-Créer un bot discord
+### Global
+Créer un fichier Dockerfile
+Créer un fichier de CI/CD
+Créer un webhook pour lier le projet au discord 
+Adapter l'archtecture hexagonale
+
+### Front
+(Créer Maquette figma)
+Trouver une librairie UI pour le front
+Faire un premier Router 
+Créer des composants qui reveiendront souvent sur notre app
+
+### Back
+Créer serveur Express
+Créer la base de donées Postgres ainsi que les tables dont nous aurons besoin via un ORM
+Faire le router
+Ajouter un swagger pour retrouver nos API plus facilement
+
+
