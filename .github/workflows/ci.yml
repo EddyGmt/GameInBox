@@ -1,0 +1,53 @@
+ name: CI Pipeline
+
+ on:
+  push:
+    branches: 
+      - main
+      - develop
+    pull_request:
+      - main
+      - develop
+
+jobs: 
+  backend-tests:
+    - name: Checkout du code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with: 
+        node-version: 18
+        caches: 'npm'
+
+    - name: Installer les dépendances du back
+      run: |
+        cd backend
+        npm install
+    
+    # - name: Lancer les tests du back
+    #   run: |
+    #     cd backend
+    #     npm test 
+
+
+  frontend-tests: 
+    name: Test Frontend 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout du code 
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Installer les dépendances du front
+        run: |
+          cd front-app 
+          npm install 
+
+      # - name: Lancer les tests du front 
+      #   run: |
+      #     cd front-app
+      #     npm test
